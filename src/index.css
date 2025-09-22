@@ -1,0 +1,17 @@
+@import "tailwindcss";
+.slick-dots {
+  bottom: 40px !important;       /* تحريك النقط لفوق */
+}
+
+.slick-dots li button:before {
+  font-size: 16px !important;    /* تكبير حجم الدوت نفسها */
+  color: white !important;       /* لون الدوت */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #facc15 !important;     /* لون الدوت النشطة (أصفر مثلا) */
+}
+.slick-prev:before,
+.slick-next:before {
+  display: none !important;
+}
