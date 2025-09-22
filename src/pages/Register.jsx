@@ -24,7 +24,7 @@ function Register() {
   let handleSubmit = async(e)=>{
     e.preventDefault()
       setError(null)
-      let resp = await fetch('https://mern1-restaurant-backend.onrender.com/user/register', 
+      let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/user/register', 
         {
           method:'POST',
           headers:{
@@ -48,7 +48,7 @@ function Register() {
   }
   return (
     <section className='flex flex-col items-center justify-center mt-10'>
-            <form className='rounded-xl shadow-lg w-1/2 p-10' onSubmit={handleSubmit}>
+            <form className='rounded-xl shadow-lg w-3/4 p-10' onSubmit={handleSubmit}>
                 <p className='text-4xl font-extrabold text-center'>Register</p>
                 <div data-aos="fade-right" className='mt-8'>
                     <div className="mb-5 w-full">

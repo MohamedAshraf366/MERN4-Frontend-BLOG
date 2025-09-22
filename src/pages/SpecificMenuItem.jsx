@@ -27,12 +27,12 @@ function SpecificMenuItem() {
   
   useEffect(()=>{
     let fetchData = async()=>{
-      let resp = await fetch(`https://mern1-restaurant-backend.onrender.com/menu/${id}`)
+      let resp = await fetch(`https://mern-1-restaurant-backend.vercel.app/menu/${id}`)
       let data = await resp.json()
       if(resp.ok){
         setmenu(data.data)
         console.log('to show specific data for menu:',data.data)
-        let catResp = await fetch(`https://mern1-restaurant-backend.onrender.com/category/${data.data.category}`);
+        let catResp = await fetch(`https://mern-1-restaurant-backend.vercel.app/category/${data.data.category}`);
         let catData = await catResp.json();
         if (catResp.ok) {
           setmenu(prev => ({ ...prev, categoryName: catData.data.name }));
@@ -57,7 +57,7 @@ function SpecificMenuItem() {
     <section className='mx-auto w-3/4 p-4 mt-12'>
       <p className='text-center text-4xl font-bold text-amber-300 capitalize mb-8'>{menu.name}</p>
       <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-20 p-4'>
-        <img src={`https://mern1-restaurant-backend.onrender.com/uploads/menu/${menu.image}`} 
+        <img src={`https://mern-1-restaurant-backend.vercel.app/uploads/menu/${menu.image}`} 
         className='h-80 w-full rounded-xl ' />
         <div className=''>
           <p className='capitalize text-2xl'><span className='text-amber-400'>Decription : </span>{menu.description}</p>

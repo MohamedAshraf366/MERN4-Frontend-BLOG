@@ -43,7 +43,7 @@ function AddCategory() {
         if(form.image){formData.append('image', form.image)}
         try{
             seterror(null)
-            let resp = await fetch('https://mern1-restaurant-backend.onrender.com/category/addCategory', 
+            let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/category/addCategory', 
                 {
                 method:'POST',
                 headers:{
@@ -75,7 +75,7 @@ function AddCategory() {
     )
   return (
     <section className='flex flex-col items-center justify-center mt-10'> 
-        <form className="grid grid-cols-12 rounded-xl shadow-lg w-1/2 p-10 gap-4"
+        <form className="grid grid-cols-12 rounded-xl shadow-lg w-3/4 p-10 gap-4"
         encType='multipart/form-data' onSubmit={handleSubmit}>
         <p className='text-4xl font-extrabold text-center col-span-12 md:col-span-12 mb-4'>Add Category</p>
             <div data-aos="zoom-in-right" className="col-span-12 md:col-span-4 flex flex-col items-center justify-center">

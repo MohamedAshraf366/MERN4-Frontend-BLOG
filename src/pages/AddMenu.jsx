@@ -38,7 +38,7 @@ function AddMenu() {
 
     useEffect(()=>{
         let fetchCategory = async()=>{
-            let resp = await fetch('https://mern1-restaurant-backend.onrender.com/category/allCategory')
+            let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/category/allCategory')
             let data = await resp.json()
             if(resp?.ok){
                 setCategory(data.data)
@@ -66,7 +66,7 @@ function AddMenu() {
         if(form.image){formData.append('image', form.image)}
         try{
             seterror(null)
-            let resp = await fetch('https://mern1-restaurant-backend.onrender.com/menu/addMenu', 
+            let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/menu/addMenu', 
                 {
                 method:'POST',
                 headers:{
@@ -98,7 +98,7 @@ function AddMenu() {
     )
   return (
     <section className='flex flex-col items-center justify-center mt-10'> 
-        <form className="grid grid-cols-12 rounded-xl shadow-lg w-1/2 p-10 gap-4"
+        <form className="grid grid-cols-12 rounded-xl shadow-lg w-3/4 p-10 gap-4"
         encType='multipart/form-data' onSubmit={handleSubmit}>
         <p className='text-4xl font-extrabold text-center col-span-12 md:col-span-12 mb-4'>Add Menu</p>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}

@@ -86,7 +86,7 @@ function Header() {
           
             <Link to='/cartList'  className="relative inline-flex items-center p-3 text-sm font-medium text-center text-white rounded-lg  focus:ring-4 focus:outline-none">
             <IoFastFood className='text-amber-400 text-3xl' />
-              <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-amber-400 border-2 border-white rounded-full top-1 -end-1 ">{cart?.length || 0}</div>
+              <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-amber-400 border-2 border-white rounded-full top-4 start-8 md:top-4 md:start-9 ">{cart?.length || 0}</div>
             </Link>
             <button to={'/'} onClick={handleLogout}
             className='p-3 bg-yellow-300 text-white rounded-xl hover:bg-yellow-400 focus:bg-yellow-500'>Log out</button>

@@ -12,7 +12,7 @@ function MenuByCategory() {
   let[loading, setloading] = useState(true)
   useEffect(()=>{
     let fetchMenuData = async()=>{
-      let resp = await fetch(`https://mern1-restaurant-backend.onrender.com/menu/menuByCategory/${categoryId}`)
+      let resp = await fetch(`https://mern-1-restaurant-backend.vercel.app/menu/menuByCategory/${categoryId}`)
       let data = await resp.json()
       if(resp.ok){
         console.log('MenuByCategory',data.data)
@@ -38,7 +38,7 @@ function MenuByCategory() {
           {menu.map((men)=>(
             <Link  to={`/menu/${men._id}`}
                 className=' border-2 p-4 rounded-3xl' key={men._id}>
-                <img src={`https://mern1-restaurant-backend.onrender.com/uploads/menu/${men.image}`} alt={men.name} className='w-full h-60 object-contain rounded-xl' />
+                <img src={`https://mern-1-restaurant-backend.vercel.app/uploads/menu/${men.image}`} alt={men.name} className='w-full h-60 object-contain rounded-xl' />
                 <p className='line-clamp-1 capitalize mt-3 text-center font-bold text-xl'>{men.name}</p>
             </Link>
           ))}

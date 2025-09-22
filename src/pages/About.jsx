@@ -14,11 +14,11 @@ function About() {
   
   useEffect(()=>{
     let fetchData = async()=>{
-      let fetchCategory = await fetch('https://mern1-restaurant-backend.onrender.com/category/count')
+      let fetchCategory = await fetch('https://mern-1-restaurant-backend.vercel.app/category/count')
       let dataCategory = await fetchCategory.json()
       setcategory(dataCategory.data)
 
-      let fetchMenu = await fetch('https://mern1-restaurant-backend.onrender.com/menu/count')
+      let fetchMenu = await fetch('https://mern-1-restaurant-backend.vercel.app/menu/count')
       let dataMenu = await fetchMenu.json()
       setmenu(dataMenu.data)
     }
