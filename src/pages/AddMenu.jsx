@@ -38,7 +38,7 @@ function AddMenu() {
 
     useEffect(()=>{
         let fetchCategory = async()=>{
-            let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/category/allCategory')
+            let resp = await fetch('https://mern1-restaurant-backend.onrender.com/category/allCategory')
             let data = await resp.json()
             if(resp?.ok){
                 setCategory(data.data)
@@ -66,7 +66,7 @@ function AddMenu() {
         if(form.image){formData.append('image', form.image)}
         try{
             seterror(null)
-            let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/menu/addMenu', 
+            let resp = await fetch('https://mern1-restaurant-backend.onrender.com/menu/addMenu', 
                 {
                 method:'POST',
                 headers:{

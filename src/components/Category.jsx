@@ -20,7 +20,7 @@ function Category() {
         useEffect(()=>{
         
         let fetchCategory = async()=>{
-            let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/category/allCategory')
+            let resp = await fetch('https://mern1-restaurant-backend.onrender.com/category/allCategory')
             let data = await resp.json()
             if(resp.ok){
                 // console.log('Category part in home page', data.data)
@@ -47,7 +47,7 @@ function Category() {
                         {category.slice(0,3).map((cat)=>(
                             <Link data-aos="fade-right" to={`/menu/menuByCategory/${cat._id}`}
                             className='border-2 p-4 rounded-3xl' key={cat._id}>
-                                <img src={`https://mern-1-restaurant-backend.vercel.app/uploads/category/${cat.image}`} alt={cat.name} className='w-full h-60 object-contain rounded-xl' />
+                                <img src={`https://mern1-restaurant-backend.onrender.com/uploads/category/${cat.image}`} alt={cat.name} className='w-full h-60 object-contain rounded-xl' />
                                 <p className='line-clamp-1 mt-3 text-center font-bold text-xl'>{cat.name}</p>
                             </Link>
                     ))}

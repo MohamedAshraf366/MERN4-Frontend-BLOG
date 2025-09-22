@@ -25,7 +25,7 @@ function Login() {
     let handleSubmit = async(e)=>{
             e.preventDefault()
             seterror(null)
-            let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/user/login', 
+            let resp = await fetch('https://mern1-restaurant-backend.onrender.com/user/login', 
                 {
                 method:'POST',
                 headers:{
@@ -48,7 +48,7 @@ function Login() {
   return (
     <>
         <section className='flex flex-col items-center justify-center mt-10'>
-            <form className='rounded-xl shadow-lg w-3/4 p-10' onSubmit={handleSubmit}>
+            <form className='rounded-xl shadow-lg  w-3/4 md:w-1/2 overflow-hidden p-10' onSubmit={handleSubmit}>
                 <p className='text-4xl font-extrabold text-center'>Log In</p>
                 <div className='mt-8'>
 

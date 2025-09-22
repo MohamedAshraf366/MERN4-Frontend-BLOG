@@ -17,7 +17,7 @@ export function CartProvider({children}){
     }, [cart]);
 
     useEffect(()=>{
-        fetch(`https://mern-1-restaurant-backend.vercel.app/cart/${userId}`,{
+        fetch(`https://mern1-restaurant-backend.onrender.com/cart/${userId}`,{
             headers:{
                 'Authorization': `Bearer ${token}`
             },
@@ -31,7 +31,7 @@ export function CartProvider({children}){
     let newCart = [...cart, { menu, qty }];
     setcart(newCart); 
 
-    let resp = await fetch(`https://mern-1-restaurant-backend.vercel.app/cart/${userId}`,{
+    let resp = await fetch(`https://mern1-restaurant-backend.onrender.com/cart/${userId}`,{
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export function CartProvider({children}){
 
     //2-to updateCart
     let updateCart = async(menu, qty)=>{
-        let resp = await fetch(`https://mern-1-restaurant-backend.vercel.app/cart/updateCart`,{
+        let resp = await fetch(`https://mern1-restaurant-backend.onrender.com/cart/updateCart`,{
             method:'PATCH',
             headers:{
                 'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ export function CartProvider({children}){
 
     // 3- to remove from cart
     let deleteFromCart = async(menu, userId)=>{
-        let resp = await fetch(`https://mern-1-restaurant-backend.vercel.app/cart/remove`,{
+        let resp = await fetch(`https://mern1-restaurant-backend.onrender.com/cart/remove`,{
             method:'DELETE',
             headers: {
         "Content-Type": "application/json",
@@ -78,7 +78,7 @@ export function CartProvider({children}){
 
     //4- to delete all items and make cart empty
     let EmptyCart = async(userId)=>{
-        let resp = await fetch(`https://mern-1-restaurant-backend.vercel.app/cart/remove/${userId}`,{
+        let resp = await fetch(`https://mern1-restaurant-backend.onrender.com/cart/remove/${userId}`,{
             method:'DELETE',
             })
         let data = await resp.json()

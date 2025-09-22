@@ -43,7 +43,7 @@ function AddCategory() {
         if(form.image){formData.append('image', form.image)}
         try{
             seterror(null)
-            let resp = await fetch('https://mern-1-restaurant-backend.vercel.app/category/addCategory', 
+            let resp = await fetch('https://mern1-restaurant-backend.onrender.com/category/addCategory', 
                 {
                 method:'POST',
                 headers:{

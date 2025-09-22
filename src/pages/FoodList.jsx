@@ -34,7 +34,7 @@ function FoodListCart() {
             {cart.map(item => (
             <div key={item.menu._id} className="rounded-xl max-w-sm bg-white border border-gray-200  shadow-lg">
                 
-                <img className='rounded-t-xl w-full h-60 object-fill' src={`https://mern-1-restaurant-backend.vercel.app/uploads/menu/${item.menu.image}`} alt="" />
+                <img className='rounded-t-xl w-full h-60 object-fill' src={`https://mern1-restaurant-backend.onrender.com/uploads/menu/${item.menu.image}`} alt="" />
                 
                 <div className="p-5 flex flex-col items-center justify-center ">
                     <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 line-clamp-1">{item.menu.name}</p>
