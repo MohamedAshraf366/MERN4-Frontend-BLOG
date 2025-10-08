@@ -1,4 +1,15 @@
 @import "tailwindcss";
+/* // <weight>: Use a value from 300 to 900
+// <uniquifier>: Use a unique and descriptive class name */
+
+* {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 .slick-dots {
   bottom: 40px !important;       /* تحريك النقط لفوق */
 }
@@ -7,11 +18,11 @@
   font-size: 16px !important;    /* تكبير حجم الدوت نفسها */
   color: white !important;       /* لون الدوت */
 }
-
-.slick-dots li.slick-active button:before {
-  color: #facc15 !important;     /* لون الدوت النشطة (أصفر مثلا) */
-}
 .slick-prev:before,
 .slick-next:before {
   display: none !important;
 }
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+

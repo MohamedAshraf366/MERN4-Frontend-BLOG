@@ -1,14 +1,12 @@
 import React from 'react'
-import Carousel from '../components/Carousel'
-import Category from '../components/Category'
-import Menu from '../components/Menu'
+import MainTop from '../Component/MainTop'
+import ShowPosts from '../Component/ShowPosts'
 
 function Home() {
   return (
     <>
-      <Carousel />
-      <Category />
-      <Menu />
+    <MainTop />
+    <ShowPosts />
     </>
   )
 }
